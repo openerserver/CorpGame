@@ -379,7 +379,7 @@ function CompanyUI(config){
 	var rule_noise = _makeLabel("company_rules_3", {x:0, y:390, w:433});
 	var slider_noise = new Slider({
 		x:0, y:420, width:430,
-		min:0.00, max:1, step:0.01,
+		min:0.00, max:0.5, step:0.01,
 		message: "companyrules/noise"
 	});
 	sliders.push(slider_noise);
