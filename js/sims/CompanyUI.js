@@ -446,11 +446,11 @@ function CompanyUI(config){
 	var slider_turns6 = new Slider({
 		x:0, y:170, width:430,
 		min:0, max:max_num-1, step:1,
-		message: "companyrules/cop_num"
+		message: "companyrules/corp_num"
 	});
 	sliders.push(slider_turns6);
 	slider_turns6.slideshow = self.slideshow;
-	listen(self, "companyrules/cop_num",function(value){
+	listen(self, "companyrules/corp_num",function(value){
 		var words = Words.get("company_rules_6"); // 
 		words = words.replace(/\[N\]/g, value+""); // replace [N] with the number value
 		rule_turns6.innerHTML = words;
@@ -465,7 +465,7 @@ function CompanyUI(config){
 	publish("companyrules/noise", [0.00]);
 	publish("companyrules/turns2", [max_num]);
     publish("companyrules/task_num", [10]);
-    publish("companyrules/cop_num", [3]);
+    publish("companyrules/corp_num", [3]);
 
 
 	/////////////////////////////////////////

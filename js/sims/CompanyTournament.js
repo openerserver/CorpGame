@@ -38,8 +38,8 @@ subscribe("companyrules/task_num",function(value){
 	CompanyTournament.TASK_NUM = value;
 });
 
-subscribe("companyrules/cop_num",function(value){
-	CompanyTournament.COP_NUM = value;
+subscribe("companyrules/corp_num",function(value){
+	CompanyTournament.CORP_NUM = value;
 });
 
 subscribe("companyrules/max_num",function(value){
@@ -225,7 +225,7 @@ function CompanyTournament(config){
 	// Play one companytournament
 	self.agentsSorted = null;
 	self.playOneTournament = function(){
-		PD.playOneTournament_1(self.agents,CompanyTournament.COP_NUM, CompanyTournament.NUM_TURNS,CompanyTournament.TASK_NUM);
+		PD.playOneTournament_1(self.agents,CompanyTournament.CORP_NUM, CompanyTournament.NUM_TURNS,CompanyTournament.TASK_NUM);
 		self.agentsSorted = _shuffleArray(self.agents.slice());
 		self.agentsSorted.sort(function(a,b){ return a.coins-b.coins; });
 	};

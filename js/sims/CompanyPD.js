@@ -147,10 +147,10 @@ PD.GETTOTALSCORES = function(agents){
     return scores;
 }
 
-//coprate_num 代表1个人与几个人合作，这个不超过10
+//corprate_num 代表1个人与几个人合作，这个不超过10
 // turns 代表合作的次数，这个值不应过高，过高代表他的工作都是完全要与其他人合作，长期会导致他对工作没有成就感
 // task_num 代表几个任务，这个代表1个月内的数目
-PD.playOneTournament_1 = function(agents,coprate_num, turns,task_num){
+PD.playOneTournament_1 = function(agents,corprate_num, turns,task_num){
 
 	// Reset everyone's coins
 	// console.log(agents[0].coins);
@@ -162,17 +162,17 @@ PD.playOneTournament_1 = function(agents,coprate_num, turns,task_num){
 	}
 	//console.log(agents);
 	// console.log(turns);
-    // 如果coprate_num大于agents.length，则代表所有人都合作
-    if (coprate_num>agents.length-1) {
-        coprate_num=agents.length-1;
+    // 如果corprate_num大于agents.length，则代表所有人都合作
+    if (corprate_num>agents.length-1) {
+        corprate_num=agents.length-1;
     }
 
     for (var i = 0; i < task_num; i++) {
         for (var j = 0; j < agents.length; j++) {
             var playerA = agents[j];
-            var coprate_index = getRadnomArray(agents.length,coprate_num);
-            for (var k = 0; k < coprate_index.length; k++) {
-                var playerB = agents[coprate_index[k]];
+            var corprate_index = getRadnomArray(agents.length,corprate_num);
+            for (var k = 0; k < corprate_index.length; k++) {
+                var playerB = agents[corprate_index[k]];
                 PD.playRepeatedGame_1(playerA, playerB, turns);
             }
         }
