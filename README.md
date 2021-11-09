@@ -11,6 +11,8 @@
 * 对整个团队的内部会产生什么影响？
 * 从长期来看，这个团队会变成什么样子？
 
+95%的人都想看看具体实例：[https://openerserver.github.io/CorpGame/index.html](https://openerserver.github.io/CorpGame/index.html)
+
 ## 理论介绍
 
 * 博弈论：合作与欺骗。人与人之间的互动关系可以简单划分为：合作 、欺骗。参考 [Game Theory](https://en.wikipedia.org/wiki/Game_theory)
